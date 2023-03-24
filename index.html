@@ -9,35 +9,92 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <header>
         <div class="navbar">
-            <div class="logo"><a href="#" >Menu</a></div>
+            <div class="logo"><i class="fa-solid fa-code" style="color: #ffa500;"></i></div>
             <ul class="links">
-                <li><a href="hero">Home</a></li>
-                <li><a href="HTML & CSS">HTML</a></li>
-                <li><a href="PHP">PHP</a></li>
-                <li><a href="C++">C++</a></li>
+                <li href="hero">Home</li>
+                <li href="darbi">Darbi</li>
+                <li href="#contact_me">Contact me</li>
             </ul>
-            <a href="#" class="action_btn">Get started</a>
+            <a href="#" class="action_btn">About me</a>
             <div class="toggle_btn">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </div>
         <div class="dropdown_menu">
-            <li><a href="hero">Home</a></li>
-                <li><a href="HTML & CSS">HTML</a></li>
-                <li><a href="PHP">PHP</a></li>
-                <li><a href="C++">C++</a></li>
-                <li><a href="#" class="action_btn">Get started</a></li>
+                <li href="hero">Home</li>
+                <li href="darbi">Darbi</li>
+                <li href="contact_me">Contact me</li>
+                <li href="#" class="action_btn">About me</li>
         </div>
     </header>
 
-    <main>
-        <section id="hero">
+
+    <div class="home">
+        <div class="hero">
             <h1>Portfolio</h1>
             <p>Šajā mājaslapā var apskatīt <br/> manas šī brīža prasmes!</p>
-        </section>
-    </main>
+        </div>
+    </div>
+
+
+    <div class="darbi">
+        <div class="work">
+            <h1>Mani darbi</h1>
+            <p>Pagaidām nekas nopietns</p>
+        </div>
+
+        <div class="visi_darbi">
+            <div class="darbs darbs-1"></div>
+            <div class="darbs darbs-2"></div>
+            <div class="darbs darbs-3"></div>
+            <div class="darbs darbs-4"></div>
+        </div>
+
+    </div>
+
+
+    <div class="contact_me" id="contact_me">
+        <h1>Contact me</h1>
+
+        <div class="column">
+            <form>
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+              <label for="country">Country</label>
+              <select id="country" name="country">
+                <option value="latvia">Latvija</option>
+                <option value="smth_else">Citur (pierakstiet iekavās)</option>
+              </select>
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+
+        <div class="cont">
+            <div class="tel_nr">
+                <i class="fa-solid fa-phone" style="color: #ffa500;"></i>
+                <p>+371 267 189 26</p>
+            </div>
+            <div class="gmail">
+                <i class="fa-solid fa-envelope" style="color: #ffa500;"></i>
+                <p>ipa22.n.karabelnikov@vtdt.edu.lv</p>
+            </div>
+            <div class="instagram">
+                <i class="fa-brands fa-instagram" style="color: #ffa500;"></i>
+                <p>username.k0lya</p>
+            </div>
+            <div class="github">
+                <i class="fa-brands fa-github" style="color: #ffa500;"></i>
+                <p><a href="https://github.com/Karabelnikovs">Karabelnikovs</a></p>
+            </div>
+        </div>
+    </div>
 
     <script>
         const toggleBtn = document.querySelector('.toggle_btn')
