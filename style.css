@@ -6,23 +6,34 @@
 }
 body{
     height: 100vh;
-    background-color: #000;
-    background-image: url('https://st3.depositphotos.com/2376545/16064/v/600/depositphotos_160644656-stock-illustration-mountain-landscape-in-morning.jpg');
+
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    /* background-color: #121a4b; */
     background-size: cover;
     background-position: center;
 }
 
+
+
 li{
     list-style: none;
-}
-
-a{
     text-decoration: none;
     color: #fff;
     font-size: 1rem;
+    transition: scale 0.2s ease;
 }
-a:hover{
+li:hover{
+    text-shadow: 2px 2px 4px #000000;
+    cursor: pointer;
     color: orange;
+    scale: 1.1;
+}
+li:active{
+    color: orange;
+    scale: 0.95;
 }
 
 header{
@@ -55,6 +66,7 @@ header{
     display: none;
 }
 .action_btn{
+    text-decoration: none;
     background-color: orange;
     color: #fff;
     padding: 0.5rem 1rem;
@@ -68,6 +80,7 @@ header{
 }
 
 .action_btn:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     scale: 1.05;
     color: #fff;
 }
@@ -90,6 +103,7 @@ header{
     transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .dropdown_menu li{
+    text-decoration: none;
     padding: 0.7rem;
     display: flex;
     align-items: center;
@@ -97,7 +111,7 @@ header{
 }
 
 .dropdown_menu.open{
-    height: 240px;
+    height: 175px;
 }
 
 .dropdown_menu .action_btn{
@@ -106,8 +120,14 @@ header{
     justify-content: center;
 }
 
-section#hero{
-    height: calc(100vh - 60px);
+.home{
+    height: 570px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero{
+    /* height: calc(100vh - 60px); */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -115,9 +135,120 @@ section#hero{
     text-align: center;
     color: #fff;
 }
-#hero h1{
+.hero h1{
     font-size: 3rem;
     margin-bottom: 1rem;
+}
+
+.contact_me{
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+.cont{
+    height: 250px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    text-align: left;
+    border-width: 7px;
+    border: solid rgb(255,165,0);
+    border-radius: 10px;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.github a{
+    color: white; 
+    text-decoration: none;
+}
+
+.column{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    margin: 50px;
+}
+input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border:  solid rgb(255,165,0);
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    border-radius: 7px;
+  }
+  
+
+  input[type=submit]{
+    text-decoration: none;
+    background-color: orange;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+input[type=submit]:hover{
+    scale: 1.05;
+    color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+input[type=submit]:active{
+    scale:0.95;
+}
+
+
+.work{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+.work h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.darbi{
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.visi_darbi{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: 200px;
+    gap: 50px;
+}
+.darbs{
+    border:  solid rgb(255,165,0);
+    border-radius: 7px;
+}
+.darbs:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 @media(max-width: 992px){
