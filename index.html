@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0414f9f1bb.js" crossorigin="anonymous"></script>
 </head>
 <body>
     
@@ -14,9 +15,9 @@
         <div class="navbar">
             <div class="logo"><i class="fa-solid fa-code" style="color: #ffa500;"></i></div>
             <ul class="links">
-                <li href="hero">Home</li>
-                <li href="darbi">Darbi</li>
-                <li href="#contact_me">Contact me</li>
+                <a href="#hero">Home</a>
+                <a href="#darbi">Darbi</a>
+                <a href="#contact_me">Contact me</a>
             </ul>
             <a href="#" class="action_btn">About me</a>
             <div class="toggle_btn">
@@ -24,15 +25,15 @@
             </div>
         </div>
         <div class="dropdown_menu">
-                <li href="hero">Home</li>
-                <li href="darbi">Darbi</li>
-                <li href="#contact_me">Contact me</li>
-                <li href="#" class="action_btn">About me</li>
+                <a href="#hero">Home</a>
+                <a href="#darbi">Darbi</a>
+                <a href="#contact_me">Contact me</a>
+                <a href="#" class="action_btn">About me</a>
         </div>
     </header>
 
-
-    <div class="home">
+<main>
+    <div class="home" id="hero">
         <div class="hero">
             <h1>Portfolio</h1>
             <p>Šajā mājaslapā var apskatīt <br/> manas šī brīža prasmes!</p>
@@ -40,14 +41,21 @@
     </div>
 
 
-    <div class="darbi">
+    <div class="darbi" id="darbi">
         <div class="work">
             <h1>Mani darbi</h1>
             <p>Pagaidām nekas nopietns</p>
         </div>
 
         <div class="visi_darbi">
-            <div class="darbs darbs-1"></div>
+            <div class="darbs darbs-1">
+                <div>
+                    <!-- <img src="7xpryajznty61ra3.png" alt="Avatar" style="width:100%"> -->
+                    <i class="fa-solid fa-shield fa-beat fa-2xl" style="color: #ffa500; width: 100px; height: 100px;"></i>
+                    <h2><b>Pirmais darbs</b></h2>
+                    <p>Te nekā nav</p>
+                </div>
+            </div>
             <div class="darbs darbs-2"></div>
             <div class="darbs darbs-3"></div>
             <div class="darbs darbs-4"></div>
@@ -76,26 +84,31 @@
             </form>
           </div>
 
-        <div class="cont">
-            <div class="tel_nr">
-                <i class="fa-solid fa-phone" style="color: #ffa500;"></i>
-                <p>+371 267 189 26</p>
-            </div>
-            <div class="gmail">
-                <i class="fa-solid fa-envelope" style="color: #ffa500;"></i>
-                <p>ipa22.n.karabelnikov@vtdt.edu.lv</p>
-            </div>
-            <div class="instagram">
-                <i class="fa-brands fa-instagram" style="color: #ffa500;"></i>
-                <p>username.k0lya</p>
-            </div>
-            <div class="github">
-                <i class="fa-brands fa-github" style="color: #ffa500;"></i>
-                <p><a href="https://github.com/Karabelnikovs">Karabelnikovs</a></p>
-            </div>
+        
+    </div>
+</main>
+<footer>
+
+    <div class="cont">
+        <div class="tel_nr">
+            <i class="fa-solid fa-phone" style="color: #ffa500;"></i>
+            <p>+371 267 189 26</p>
+        </div>
+        <div class="gmail">
+            <i class="fa-solid fa-envelope" style="color: #ffa500;"></i>
+            <p>ipa22.n.karabelnikov@vtdt.edu.lv</p>
+        </div>
+        <div class="instagram">
+            <i class="fa-brands fa-instagram" style="color: #ffa500;"></i>
+            <p>username.k0lya</p>
+        </div>
+        <div class="github">
+            <i class="fa-brands fa-github" style="color: #ffa500;"></i>
+            <p><a href="https://github.com/Karabelnikovs">Karabelnikovs</a></p>
         </div>
     </div>
 
+</footer>
     <script>
         const toggleBtn = document.querySelector('.toggle_btn')
         const toggleBtnIcon = document.querySelector('.toggle_btn i')

@@ -18,26 +18,26 @@ body{
 
 
 
-li{
+a{
     list-style: none;
     text-decoration: none;
     color: #fff;
     font-size: 1rem;
     transition: scale 0.2s ease;
 }
-li:hover{
+a:hover{
     text-shadow: 2px 2px 4px #000000;
     cursor: pointer;
     color: orange;
     scale: 1.1;
 }
-li:active{
+a:active{
     color: orange;
     scale: 0.95;
 }
 
 header{
-    position:relative;
+    position: relative;
     padding: 0 2rem;
 }
 
@@ -64,6 +64,7 @@ header{
     font-size: 1.5rem;
     cursor: pointer;
     display: none;
+    transition: all 0.5s ease;
 }
 .action_btn{
     text-decoration: none;
@@ -101,8 +102,9 @@ header{
     border-radius: 10px;
     overflow: hidden;
     transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.5s ease;
 }
-.dropdown_menu li{
+.dropdown_menu a{
     text-decoration: none;
     padding: 0.7rem;
     display: flex;
@@ -141,14 +143,23 @@ header{
 }
 
 .contact_me{
-    height: 700px;
+    height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     color: #fff;
+    
 }
-
+ footer{
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    margin-bottom: 60px;
+ }
 .cont{
     height: 250px;
     width: 400px;
@@ -200,12 +211,14 @@ input[type=text], select, textarea{
     font-weight: bold;
     cursor: pointer;
     transition: scale 0.2 ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 input[type=submit]:hover{
     scale: 1.05;
     color: #fff;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-shadow: 2px 2px 4px #000000;
 }
 
 input[type=submit]:active{
@@ -239,11 +252,12 @@ input[type=submit]:active{
 .visi_darbi{
     margin-top: 50px;
     display: grid;
-    grid-template-columns: repeat(4, 200px);
-    grid-template-rows: 200px;
+    grid-template-columns: repeat(4, 300px);
+    grid-template-rows: 300px;
     gap: 50px;
 }
 .darbs{
+    padding-top: 70px;
     border:  solid rgb(255,165,0);
     border-radius: 7px;
 }
@@ -262,10 +276,17 @@ input[type=submit]:active{
     .dropdown_menu{
         display: block;
     }
+    .visi_darbi{
+        grid-template-columns: repeat(2, 200px);
+        grid-template-rows: repeat(2, 200px);
+        gap: 50px;
+        margin-bottom: 100px;
+    }
 }
 @media(max-width: 576px){
     .dropdown_menu{
         left:2rem;
         width: unset;
     }
+    
 }
