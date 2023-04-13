@@ -37,7 +37,7 @@ a:active{
 }
 
 header{
-    position: relative;
+    position: sticky;
     padding: 0 2rem;
 }
 
