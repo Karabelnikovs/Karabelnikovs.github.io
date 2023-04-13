@@ -20,8 +20,13 @@
                 <a href="#contact_me">Contact me</a>
             </ul>
             <a href="https://github.com/Karabelnikovs" class="action_btn">Github</a>
-            <div class="toggle_btn">
-                <i class="fa-solid fa-bars"></i>
+            <div class="toggle_btn" id="toggle_btn">
+                <!-- <i class="fa-solid fa-bars"></i> -->
+                <div>
+                    <span class="line-1"></span>
+                    <span class="line-2"></span>
+                    <span class="line-3"></span>
+                </div>
             </div>
         </div>
         <div class="dropdown_menu">
@@ -49,32 +54,24 @@
 
         <div class="visi_darbi">
             <div class="darbs darbs-1">
-                <div>
-                    <i class="fa-solid fa-shield fa-beat fa-2xl" style="color: #ffa500; width: 100px; height: 100px;"></i>
-                    <h2><b>Pirmais darbs</b></h2>
-                    <p>Te nekā nav</p>
-                </div>
+                    <img src="kartinas.png" style="width: 100%; top: 0;">
+                    <h2><b>Kartiņas</b></h2>
+                    <p>Pirmā saskarsme ar div elementiem. Šo esmu izmantojis visu laiku.</p>
             </div>
             <div class="darbs darbs-2">
-                <div>
-                    <i class="fa-solid fa-shield fa-beat fa-2xl" style="color: #ffa500; width: 100px; height: 100px;"></i>
-                    <h2><b>Otrais darbs</b></h2>
-                    <p>Te nekā nav</p>
-                </div>
+                    <img src="grid-of-animals.png" style="width: 100%; top: 0;">
+                    <h2><b>CSS Grid</b></h2>
+                    <p>Iemācījos izmantot CSS grid. Izmantoju arī šīs mājaslapas izveidei.</p>
             </div>
             <div class="darbs darbs-3">
-                <div>
-                    <i class="fa-solid fa-shield fa-beat fa-2xl" style="color: #ffa500; width: 100px; height: 100px;"></i>
-                    <h2><b>Trešais darbs</b></h2>
-                    <p>Te nekā nav</p>
-                </div>
+                    <img src="Screenshot 2022-11-16 at 20.09.42.png" style="width: 100%; top: 0;">
+                    <h2><b>To Do list</b></h2>
+                    <p>Iemācījos checkbox, kā arī iepazinos ar Javascript.</p>
             </div>
             <div class="darbs darbs-4">
-                <div>
                     <i class="fa-solid fa-shield fa-beat fa-2xl" style="color: #ffa500; width: 100px; height: 100px;"></i>
                     <h2><b>Ceturtais darbs</b></h2>
-                    <p>Te nekā nav</p>
-                </div>
+                    <p>Te pagaidām nekā nav!</p>
             </div>
         </div>
 
@@ -93,6 +90,17 @@
               <label for="country">Country</label>
               <select id="country" name="country">
                 <option value="latvia">Latvija</option>
+                <option value="latvia">ASV</option>
+                <option value="latvia">Vācija</option>
+                <option value="latvia">Spānija</option>
+                <option value="latvia">Brazīlija</option>
+                <option value="latvia">Nigēra</option>
+                <option value="latvia">Krievija</option>
+                <option value="latvia">Lielbritānija</option>
+                <option value="latvia">Meksika</option>
+                <option value="latvia">Ķīna</option>
+                <option value="latvia">Ziemeļkoreja</option>
+                <option value="latvia">Kazahstāna</option>
                 <option value="smth_else">Citur (pierakstiet iekavās)</option>
               </select>
               <label for="text">Subject</label>
@@ -126,21 +134,14 @@
     </div>
 
 </footer>
-    <script>
-        const toggleBtn = document.querySelector('.toggle_btn')
-        const toggleBtnIcon = document.querySelector('.toggle_btn i')
-        const dropDownMenu = document.querySelector('.dropdown_menu')
-
-        toggleBtn.onclick =function(){
+<script>
+    const toggleBtn = document.querySelector('.toggle_btn')
+    const dropDownMenu = document.querySelector('.dropdown_menu')
+    toggleBtn.onclick =function(){
             dropDownMenu.classList.toggle('open');
             const isOpen = dropDownMenu.classList.contains('open');
-
-            toggleBtnIcon.classList = isOpen
-            ? 'fa-solid fa-xmark'
-            : 'fa-solid fa-bars'
-        }
-
-        
-    </script>
+        toggleBtn.classList.toggle("openmenu");
+    }
+</script>
 </body>
 </html>

@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family:'Courier New', Courier, monospace;
+    scroll-behavior: smooth;
 }
 body{
     height: 100vh;
@@ -35,8 +36,9 @@ a:active{
 }
 
 header{
-    border-bottom: solid rgb(42, 46, 81) 3px;
-    border-radius: 100px;
+    border-bottom: solid rgb(255, 165, 0) 3px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
     background: #0F2027;
     background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027); 
     background: linear-gradient(to right, #2C5364, #203A43, #0F2027); 
@@ -65,12 +67,48 @@ header{
     gap: 2rem;
 }
 .navbar .toggle_btn{
-    color:#fff;
+    /* color:#fff;
     font-size: 1.5rem;
     cursor: pointer;
     display: none;
-    transition: all 0.5s ease;
+    transition: all 0.5s ease; */
+    display: none;
+    
 }
+.toggle_btn div{
+    width: 35px;
+    height: 35px;
+}
+
+.toggle_btn span{
+    height: 4px;
+    width: 35px;
+    border-radius: 3px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    background-color: #ffffff;
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+}
+.toggle_btn .line-1{
+    transform: translate(-50%,9px);
+}
+.toggle_btn .line-3{
+    transform: translate(-50%,-13px);
+}
+.openmenu .line-1{
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+.openmenu .line-3{
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.openmenu .line-2{
+    transition: 1s;
+    transform: translate(100px,-50px);
+    rotate: 320deg;
+}
+
 .action_btn{
     text-decoration: none;
     background-color: orange;
@@ -127,7 +165,7 @@ header{
 }
 
 .home{
-    height: 570px;
+    height: 670px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -189,7 +227,7 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: left;
+    align-items: center;
     margin: 50px;
 }
 input[type=text], select, textarea{
@@ -251,6 +289,7 @@ input[type=submit]:active{
     justify-content: center;
     text-align: center;
     color: #fff;
+    padding: 0;
 }
 
 .visi_darbi{
@@ -261,12 +300,14 @@ input[type=submit]:active{
     gap: 50px;
 }
 .darbs{
-    padding-top: 70px;
     border:  solid rgb(255,165,0);
     border-radius: 7px;
 }
+.darbs-4{
+    padding-top: 70px;
+}
 .darbs:hover{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 15px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 @media(max-width: 1400px){
