@@ -183,6 +183,9 @@ header{
     font-size: 3rem;
     margin-bottom: 1rem;
 }
+.hero p{
+    font-size: 1.2rem;
+}
 
 .contact_me{
     height: 600px;
@@ -325,6 +328,9 @@ input[type=submit]:active{
     }
 }
 @media(max-width: 992px){
+    .hero p{
+        font-size: 0.8rem;
+    }
     header{
         border: none;
     }
@@ -345,14 +351,15 @@ input[type=submit]:active{
         width: unset;
     }
     .column{
-        width: 250px;
+        width: 350px;
         display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 50px;
     }
-    .contact_me{
-        width: 250px;
+    .cont{
+        width: 350px;
     }
 }
 @media(max-width: 750px){
